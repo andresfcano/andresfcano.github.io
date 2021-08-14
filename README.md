@@ -10,3 +10,6 @@
 - 💬 Ask me about Data Science and Machine Learning applied to Astrophysics, Plasma Physics, Chemical Kinetics and Combustion
 - 📫 How to reach me: andrescano30@gmail.com
 - ⚡ Fun fact: I was born in Colombia but raised in Panama!
+
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=andresfcano&show_icons=true&hide_border=true&&count_private=true&include_all_commits=true" />
