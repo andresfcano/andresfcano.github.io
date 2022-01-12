@@ -43,9 +43,6 @@ html {
 
 body {
   background: var(--clr-light);
-  background-image: url("./bg.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   color: var(--clr-dark);
   margin: 0;
   font-family: var(--ff-primary);
