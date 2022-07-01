@@ -392,6 +392,7 @@ h3 { font-size: var(--fs-h3) }
 
 .portfolio {
   display: grid;
+  place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-column-gap: 2em;
   /* max-width: optional */
