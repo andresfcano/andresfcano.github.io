@@ -315,6 +315,7 @@ h3 { font-size: var(--fs-h3) }
 
 .service {
   max-width: 500px;
+  font-size: 1.2em;
   margin: 0 auto;
   color: var(--clr-light);
 }
@@ -373,6 +374,7 @@ h3 { font-size: var(--fs-h3) }
 
   .about-me__body {
     color: var(--clr-light);
+    font-size: 1.2em;
   }
 
   .about-me__img {
