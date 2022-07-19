@@ -1,0 +1,24 @@
+Ana Notes
+
+
+1- Background - color liso (light background)
+2- Fonts en negro
+3- look up call to action (read papers, contact, download CV) - un boton
+4- Escoger alineacion general (se ve caotico)
+5- foto principal un poco mas pequena, titulo muy casual, my work button bigger.
+6- Idea: Setup (Andres Cano) - below: description about me. call to action immediately.
+7- flaticon.com - iconitos Idea: add small icons to What I Do sections
+8- Who I am - image realign
+9- Find a spot to talk about publications. (main page)
+10- My Work and What I Do (too casual, overlap?) Idea naming: areas of expertise (more formal)
+11- Think about adding substitles to all sections (or get rid of them)
+12- Idea: My Work (icon and section title, instead of images)
+13- Think about separating main secitons w diff background / horizontal lines
+14- footer height loo large (think about font black/white) ang color coming form icons/geometric shapes/lines separators etc.
+15- change email to icon / instead of text hyperlink (footer)
+16- make burguer nav taller, no selection box around it.
+17- add contact section to bugure nav menu, think about where to include publications
+18- button to view PDF of CV
+19- think about nav as heading not in burguer.
+20- Logo (designcroud)
+21- hover image change is really cool!
