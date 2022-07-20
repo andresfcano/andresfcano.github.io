@@ -89,7 +89,7 @@ strong { font-weight: var(--fw-bold) }
   transition: transform 200ms ease-in-out;
 }
 
-.btn:hover {
+.btn:hover, .cv-btn:hover {
   transform: scale(1.1);
 }
 
@@ -356,12 +356,14 @@ h3 { font-size: var(--fs-h3) }
 
 @media (min-width: 600px) {
   .about-me {
+    place-items: center;
     display: grid;
     max-width: 1200px;
     grid-template-columns: 1fr 200px;
     grid-template-areas:
       "title title"
-      "text img";
+      "text img"
+      "btn btn";
     grid-column-gap: 2em;
   }
 
@@ -391,6 +393,22 @@ h3 { font-size: var(--fs-h3) }
   .about-me__img {
     grid-area: img;
     z-index: 2;
+  }
+
+  .cv-btn{
+    grid-area: btn;
+    display: inline-block;
+    padding: 0.5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
   }
 }
 
