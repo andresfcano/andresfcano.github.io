@@ -354,7 +354,7 @@ h3 { font-size: var(--fs-h3) }
   box-shadow: var(--bs);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 300px) {
   .about-me {
     place-items: center;
     display: grid;
@@ -419,6 +419,15 @@ h3 { font-size: var(--fs-h3) }
   text-align: center;
 }
 
+@media (min-width: 300px) {
+  .portfolio {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: 2em;
+    max-width: 1200px;
+  }
+
 .section__title--work::after {
   content: '';
   display: block;
@@ -427,15 +436,6 @@ h3 { font-size: var(--fs-h3) }
   margin: 0.5em auto 1em;
   background: var(--clr-dark); /* might be currentColor*/
   opacity: 0.45;
-}
-
-
-.portfolio {
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-column-gap: 2em;
-  /* max-width: optional */
 }
 
 .portfolio__item:hover,
@@ -447,7 +447,6 @@ h3 { font-size: var(--fs-h3) }
   color: var(--clr-dark);
   text-decoration: none;
 }
-
 
 .portfolio__item {
   transition:
