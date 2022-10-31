@@ -1,0 +1,28 @@
+{
+    "portfolios": [
+        {
+            "cover": "/portfolio/portfolio-1/about-me.jpeg",
+            "title": "GGWP",
+            "description": "React, JSX, Tailwind, Jest",
+            "url": "http://google.com"
+        },
+        {
+            "cover": "/portfolio/portfolio-1/about-me.jpeg",
+            "title": "GGWP",
+            "description": "React, JSX, Tailwind, Jest",
+            "url": "http://google.com"
+        },
+        {
+            "cover": "/portfolio/portfolio-1/about-me.jpeg",
+            "title": "GGWP",
+            "description": "React, JSX, Tailwind, Jest",
+            "url": "http://google.com"
+        },
+        {
+            "cover": "/portfolio/portfolio-1/about-me.jpeg",
+            "title": "GGWP",
+            "description": "React, JSX, Tailwind, Jest",
+            "url": "http://google.com"
+        }
+    ]
+}
