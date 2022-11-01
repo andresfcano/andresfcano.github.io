@@ -2,7 +2,7 @@
   z-index: 0;
   width: 400px;
   height: 609px;
-  opacity: 0;
+  // opacity: 0;
   position: absolute;
   top: 0;
   right: 15%;
@@ -34,4 +34,5 @@
 .svg-container {
   stroke: #000;
   stroke-width: 10;
+  animation: fadeIn 5s linear;
 }
