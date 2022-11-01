@@ -45,7 +45,9 @@ const Portfolio = () => {
     <>
     <div className="container portfolio-page">
       <h1 className="page-title">
-        <AnimatedLetters letterClass={letterClass} strArray={"Portfolio & Publications".split("")} idx={6} />
+        <AnimatedLetters letterClass={letterClass} strArray={"Portfolio".split("")} idx={6} />
+        <br/>
+        <AnimatedLetters letterClass={letterClass} strArray={"& Publications".split("")} idx={6} />
       </h1>
       <div>{renderPortfolio(portfolioData.portfolios)}</div>
     </div>

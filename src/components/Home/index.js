@@ -10,7 +10,7 @@ const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
   const nameArray = " Andres Cano".split("")
-  const jobArray = "Physicist & Engineer.".split("")
+  const jobArray = "researcher.".split("")
 
   useEffect(() => {
     setTimeout(() => {
@@ -41,7 +41,7 @@ const Home = () => {
               idx={15}
             />
           </h1>
-          <h2>Researcher | Data Scientist | Developer</h2>
+          <h2>Engineer | Data Scientist | Developer</h2>
           <div className="home-buttons-container">
             <Link to="/contact" className="flat-button">
               CONTACT ME

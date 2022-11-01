@@ -77,6 +77,7 @@ const Sidebar = () => {
             <FontAwesomeIcon
               icon={faLinkedin}
               color="#4d4d4e"
+              size="2x"
               className="anchor-icon"
             />
           </a>
@@ -90,6 +91,7 @@ const Sidebar = () => {
             <FontAwesomeIcon
               icon={faGithub}
               color="#4d4d4e"
+              size="2x"
               className="anchor-icon"
             />
           </a>
