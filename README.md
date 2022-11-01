@@ -8,6 +8,6 @@
 - 👯 I’m looking to collaborate on Data Science projects with scientific applications
 - 🤔 I’m looking for help with finding tools and challenges that will make me a better professional
 - 💬 Ask me about Data Science and Machine Learning applied to Astrophysics, Plasma Physics, Chemical Kinetics and Combustion
-- You can find my CV [here](CV.pdf)
+- You can find my CV [here](src/assets/CV_latex.pdf)
 - 📫 How to reach me: andrescano30@gmail.com
 - ⚡ Fun fact: I was born in Colombia but raised in Panama!
