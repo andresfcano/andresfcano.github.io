@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import myCV from '../../assets/CV_latex.pdf'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
-import LogoTitle from '../../assets/images/atom.png'
 import Logo from './Logo'
 import './index.scss'
 
