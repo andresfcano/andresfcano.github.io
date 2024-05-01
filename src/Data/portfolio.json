@@ -1,6 +1,5 @@
 {
     "portfolios": [
-        {"new edit": "new value"},
         {
             "cover": "/portfolio/portfolio-1/about-me.jpeg",
             "title": "GGWP",
