@@ -1,5 +1,19 @@
-h2 {
-  color: #fff;
+.container.about-page {
+  overflow: auto;
+  .text-zone {
+    width: 45% !important;
+    padding-right: 1em;
+    h1 {
+      font-size: 4em; /* Adjust this value as needed */
+    }
+    h2 {
+      font-size: 3em; /* Adjust this value as needed */
+      color: #fff;
+    }
+    p {
+      font-size: 1.8em; /* Adjust this value as needed */
+    }
+  }
 }
 
 .link {

@@ -38,7 +38,7 @@ const Home = () => {
             <AnimatedLetters
               letterClass={letterClass}
               strArray={jobArray}
-              idx={15}
+              idx={9}
             />
           </h1>
           <div className="home-buttons-container">
