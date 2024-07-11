@@ -1,3 +1,4 @@
+
 .portfolio-page {
   padding-left: 100px;
   padding-right: 50px;
@@ -26,6 +27,7 @@
     overflow: hidden;
     border-radius: 10px;
     max-width: calc(25% - 10px);
+    cursor: pointer;
 
     .portfolio-image {
       position: absolute;

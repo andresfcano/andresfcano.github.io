@@ -91,7 +91,7 @@ const Contact = () => {
         <div className="info-map">
           Andres Felipe Cano Botero
           <br />
-          Researcher | Data Scientist | Developer
+          Data Scientist | Researcher
           <br />
           Atlanta, GA. 30309. USA <br />
           <br />

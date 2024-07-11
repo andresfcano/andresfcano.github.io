@@ -1,6 +1,6 @@
 .nav-bar {
   background: #181818;
-  width: 60px;
+  width: 80px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -14,15 +14,10 @@
     img {
       display: block;
       margin: 8px auto;
-      width: 40px;
+      width: 60px;
       height: auto;
       animation: rotateIn 3s linear both;
       animation-delay: 2s;
-
-      &.sub-logo {
-        width: 50px;
-        display: none;
-      }
     }
   }
 
