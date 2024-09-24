@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import myCV from '../../assets/CV_Andres.pdf'
+import myCV from '../../assets/CV_Andres__Oct2024_.pdf'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import Logo from './Logo'
