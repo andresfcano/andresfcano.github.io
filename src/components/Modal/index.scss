@@ -6,26 +6,84 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .portfolio-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: #FFF;
-  padding: 350px 600px;
-  z-index: 1000;
-  overflow: scroll;
+  padding: 2rem;
+  max-height: 90vh;
+  width: 90%;
+  max-width: 1200px;
+  overflow-y: auto;
+  border-radius: 10px;
+  position: relative;
+  color: #000 !important; // default text color
+
+  h1, h2, h3, h4, h5, h6, p, a, li, span {
+    color: #000 !important;
+  }
 
   h2 {
-    color: #000;
-  }
-  p {
-    color: #000;
+    font-size: 1.75em;
+    margin-bottom: 0.1em; // reduce space below headers
   }
 
-  .closeButn {
-    padding: 50px;
+  h2 + p {
+    margin-top: 0.1em; // reduce space above first paragraph after h2
+  }
+
+  p {
+    margin: 0.4em 0; // tighter spacing between paragraphs
+    font-size: 16px;
+  }
+
+  a {
+    text-decoration: underline;
   }
 }
+
+.modal-image-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem; // slightly tighter spacing
+  flex-wrap: wrap;
+  padding: 1rem; // optional: adds some breathing room around the gallery
+  max-width: 90%; // optional: keeps gallery narrower overall
+  margin: 0 auto;
+
+  figure {
+    flex: 1 1 35%; // reduced from 40%
+    max-width: 40%; // reduced from 40% to shrink overall image area
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      max-height: 250px; // optional: adds upper limit to image height
+      // border-radius: 8px; // optional: rounded corners
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); // optional: subtle shadow
+    }
+
+    figcaption {
+      margin-top: 0.3rem;
+      font-size: 1.5rem;
+      color: #444;
+      font-style: italic;
+    }
+  }
+}
+
+
+// For phones:
+// @media (max-width: 600px) {
+//   .modal-image-gallery figure {
+//     flex: 1 1 100%;
+//     max-width: 100%;
+//   }
+// }
+

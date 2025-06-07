@@ -1,24 +1,61 @@
 {
-    "portfolios": [
+  "portfolios": [
+    {
+      "cover": "/portfolio/cover-images/aviation-project.png",
+      "title": "Dataiku: Optimized MLOps in Aviation",
+      "description": "CI/CD, Azure DevOps, MLOps"
+    },
+    {
+      "cover": "/portfolio/cover-images/insurance-modeling.png",
+      "title": "Dataiku: Offline Chatbot for Insurance",
+      "description": "LLM Application, Custom Chatbots, HuggingFace"
+    },
+    {
+      "cover": "/portfolio/cover-images/alma-array-night.jpg",
+      "title": "Dataiku: Non-profit for ALMA Observatory",
+      "description": "Scientific Modeling, Predictive Analysis, Quality Assurence",
+      "introduction": "At the&nbsp;<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.almaobservatory.org/en/home/\" class=\"link\">ALMA Observatory</a>, I collaborated with a team of astronomers to enhance telescope operations using machine learning. We focused on automating the Quality Assurance Level 0 (QA0) process, which classifies each observation as Pass, SemiPass, or Fail based on its quality and completeness. While Pass observations proceed to further analysis, SemiPass cases often require manual review and are the most resource-intensive to resolve.",
+      "motivation": "Roughly 10% of observations fall into the SemiPass category due to borderline atmospheric conditions or complex scientific setups. These cases significantly slow down the QA0 process, consume expert astronomer time, and delay decisions on whether to re-observe or proceed. Our goal was to use machine learning to reduce this bottleneck and allow Astronomers on Duty (AoDs) to focus on higher-priority tasks.",
+      "results": [
+        "Using Dataiku, I worked with ALMA scientists to build a classification model that predicts whether an observation is a Pass or SemiPass based on various operational and observational parameters. We used Dataiku’s AutoML, visualization, and collaborative tooling to ingest and transform data, test multiple models, and converge on a performant solution, enabling contributions from both data scientists and astronomers.",
+        "Preliminary deployment shows that the model can reduce SemiPass assessments by 6%, saving up to 50 hours of astronomer time over three months—and up to 120 hours when fully operational. The automation also streamlines QA0 decision-making, improves response time for observation repeats, and optimizes computing resource usage, resulting in both cost savings and improved scientific throughput."
+      ],
+      "images": [
         {
-            "cover": "/portfolio/portfolio-1/about-me.jpeg",
-            "title": "GGWP",
-            "description": "React, JSX, Tailwind, Jest"
+          "src": "/portfolio/images/andres-sergio-alma.jpg",
+          "alt": "Sergio & Andres",
+          "caption": "I (left) had the opportunity to visit the ALMA team in the Chilean desert. Here I am with the director of scietnific operations, Sergio (right)."
         },
         {
-            "cover": "/portfolio/portfolio-1/about-me.jpeg",
-            "title": "GGWP",
-            "description": "React, JSX, Tailwind, Jest"
-        },
-        {
-            "cover": "/portfolio/portfolio-1/about-me.jpeg",
-            "title": "GGWP",
-            "description": "React, JSX, Tailwind, Jest"
-        },
-        {
-            "cover": "/portfolio/portfolio-1/about-me.jpeg",
-            "title": "GGWP",
-            "description": "React, JSX, Tailwind, Jest"
+          "src": "/portfolio/images/Dataiku_logo.png",
+          "alt": "Dataiku Logo",
+          "caption": "Dataiku - Software for end-to-end AI/ML solutions"
         }
-    ]
+      ]
+    },
+    {
+      "cover": "/portfolio/cover-images/MS_Thesis.png",
+      "title": "M.S. Thesis: Modeling of Biofuels",
+      "description": "Quantum Chem, High-Performance Computing, Python, Unix",
+      "introduction": "I completed my M.S. in Mechanical Engineering at the University of Colorado Boulder in August 2022, where I worked under the guidance of Professor&nbsp;<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.colorado.edu/mechanical/nicole-labbe\" class=\"link\">Nicole J. Labbe</a>. My graduate research combined engineering, chemistry, and computing to study cleaner alternatives for diesel fuel, you can find the details in my <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.proquest.com/openview/0b692a0fe55e6b40c4ce3497dd108ef8/1?pq-origsite=gscholar&cbl=18750&diss=y\" class=\"link\">Thesis.</a>",
+      "motivation": "The goal of my research was to understand how certain diesel additives break down under heat and how that might help reduce soot in engines. I used simulation tools from quantum chemistry to explore how molecules behave during combustion—an approach that offers a safer, cheaper, faster, and more detailed view than physical experiments alone.",
+      "results": [
+        "To speed up the slowest part of the simulation process, I built a Python tool that automatically analyzes molecules and prepares them for large-scale computations. By combining graph theory and chemical heuristics, the tool identifies rotatable bonds and generates input files for quantum chemistry simulations. I also connected this automation pipeline to an advanced solver developed at&nbsp;<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://tcg.cse.anl.gov/papr/codes/mess.html\" class=\"link\">Argonne National Laboratory</a> to accurately calculate how fast reactions occur under changing pressures and temperatures. This made it possible to run larger studies and reduced manual work from days to hours.",
+        "Using this automated pipeline, I modeled the early-stage combustion of three bio-sourced diesel additives. While all three showed potential for reducing soot emissions—consistent with engine experiments—my simulations revealed key molecular intermediates that likely explain this behavior. The results also showed that some additives may generate harmful byproducts, such as formaldehyde, highlighting the importance of continued evaluation before large-scale adoption."
+      ],
+
+      "images": [
+        {
+          "src": "/portfolio/images/labbe-lab-logo.jpg",
+          "alt": "Research lab logo",
+          "caption": "Labbe Lab Logo"
+        },
+        {
+          "src": "/portfolio/images/molecular-scan.jpg",
+          "alt": "Rotor scan",
+          "caption": "Example of molecular simulation used to predict combustion chemistry"
+        }
+      ]
+    }
+  ]
 }

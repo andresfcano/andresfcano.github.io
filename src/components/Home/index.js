@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import myCV from '../../assets/CV_Andres__Oct2024_.pdf'
+import myCV from '../../assets/CV_Andres__2025____Industry.pdf'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import Logo from './Logo'
@@ -10,7 +10,7 @@ const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
   const nameArray = " Andres Cano".split("")
-  const jobArray = "Researcher & Data Scientist".split("")
+  const jobArray = "Data Scientist & Researcher".split("")
 
   useEffect(() => {
     setTimeout(() => {
@@ -42,10 +42,9 @@ const Home = () => {
             />
           </h1>
           <div className="home-buttons-container">
-            <Link to="/contact" className="flat-button">
-              CONTACT ME
-            </Link>
             <a href={myCV} className="flat-button" target="_blank" rel="noopener noreferrer">MY CV</a>
+            <Link to="/portfolio" className="flat-button">PROJECTS</Link>
+            <Link to="/contact" className="flat-button">CONTACT ME</Link>
           </div>
         </div>
         <Logo />

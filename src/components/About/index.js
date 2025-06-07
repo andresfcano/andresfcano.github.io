@@ -32,29 +32,37 @@ const About = () => {
               idx={15}
             />
           </h1>
+          <h2>Data Science</h2>
+          <p>
+            I'm currently a Data Scientist at <a target="_blank" rel="noopener noreferrer" href="https://www.dataiku.com/" class="link">Dataiku</a>, where I lead the development of production-grade AI solutions for Fortune 500 companies.
+            My work spans aviation, banking, insurance, and retail—leveraging NLP, computer vision, time series forecasting, and large language models (LLMs) to automate workflows and deliver measurable business impact.
+          </p>
+          <p>
+            I’ve delivered over 15 end-to-end AI solutions, created custom plugins to extend Dataiku's capabilities, and trained more than 100 client stakeholders on the use of data science platforms. 
+            As a Data Scientist in Residence at a major airline, I developed and formalized their MLOps framework, aligning it with CI/CD and security standards to enable successful AI project deployment across departments.
+          </p>
+          <p>
+            What distinguishes me is the scientific mindset I bring to every project—deep curiosity, structured problem solving, and a focus on long-term solutions. My experience working with cross-functional teams allows me to translate complex technical ideas into practical tools that empower others and deliver real value.
+          </p>
+
           <h2>Scientific Research</h2>
           <p>
             I completed my M.S. Thesis in Mechanical Engineering at the University of Colorado, Boulder in August 2022
             (Advisor: <a target="_blank" rel="noopener noreferrer" href="https://www.colorado.edu/mechanical/nicole-labbe" class="link">Nicole J. Labbe</a>).
             My thesis <em>Alkyl end group effects on the thermal decomposition of oxymethylene ether fuel additives</em> focused
-            on leveraging computational chemistry tools to improve chemistry models of additives that reduce
-            soot formation in diesel engines. I graduated from the University of Rochester in 2019 with a B.S. in Astrophysics, where I worked for two years
-            with <a target="_blank" rel="noopener noreferrer" href="https://www.sas.rochester.edu/pas/people/faculty/gourdain_pierre/index.html" class="link">Pierre-Alexandre Gourdain</a> studying extreme state physics.
+            on leveraging quantum chemistry simulations to understand how biofuel additives help reduce soot from diesel engines.
           </p>
-          <h2>Data Science</h2>
           <p>
-            I worked as a Data Scientist before starting my masters, where gaining experience with relational databases, namely with Microsoft SQL Server.
-            My responsibilities involved querying, importing, analyzing, and extracting insights on sales data, as well as developing Python-based
-            machine learning models that would predict market trends. Together with the web development team, I deployed a business intelligence app
-            that showcased our products compared to those of competitors using web scraping tools like <em>Beautiful Soup</em> and <em>Selenium</em>.
+            To support this work, I built a high-performance computing pipeline using Python and Unix shell scripts to automate calculations on the <a target="_blank" rel="noopener noreferrer" href="https://www.colorado.edu/rc/resources/summit" class="link">RMACC Summit supercomputer</a>,
+            cutting down manual setup time from weeks to minutes. This improved both efficiency and scalability in computational chemistry workflows.
           </p>
-          <h2>Machine Learning in Python</h2>
           <p>
-            I've leveraged Python libraries (numpy, pandas, sklearn) in my research work to build classical machine learning models
-            (i.e. KNN, ensemble methods, regressors) to extract knowledge from experiments. In personal projects, I've used basic NLP
-            libraries (Vader, TextBlob) to perform sentiment analysis on online posts, and have build extensions to open-source neural
-            networks codes to enable Chess engines to play the <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Millennium_3D_chess" class="link">Millenium 3D Chess</a> variation.
-            The cube on the right shows the technologies that I've used in my past work.
+            I hold a B.S. in Astrophysics from the University of Rochester, where I worked with <a target="_blank" rel="noopener noreferrer" href="https://www.sas.rochester.edu/pas/people/faculty/gourdain_pierre/index.html" class="link">Pierre-Alexandre Gourdain</a> in the Extreme State Physics Laboratory. 
+            There, I helped design and build a 250 GW pulsed-power driver to study matter at extreme pressures and temperatures. 
+          </p>
+          <p>
+            These research experiences trained me to approach problems methodically and to build reliable tools that support experimentation and insight. 
+            They’re also the foundation of my strengths in critical thinking, technical communication, and system-level analysis—skills that I now apply daily as a data scientist.
           </p>
         </div>
 
