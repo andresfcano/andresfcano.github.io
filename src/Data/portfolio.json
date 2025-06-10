@@ -3,7 +3,20 @@
     {
       "cover": "/portfolio/cover-images/aviation-project.png",
       "title": "Dataiku: Optimized MLOps in Aviation",
-      "description": "CI/CD Pipelines, Azure DevOps, MLOps Frameworks"
+      "description": "CI/CD Pipelines, Azure DevOps, MLOps Frameworks",
+      "introduction": "A major U.S. airline's data science team was developing multiple projects using Dataiku but lacked a structured machine learning operations (MLOps) process. This resulted in both development and production projects sharing the same environment, leading to security risks and operational inefficiencies.",
+      "motivation": "The primary motivation was to establish a robust MLOps strategy that would align with the airline's CI/CD standards, reduce security risks, and improve the efficiency and transparency of project delivery. By separating development and production environments and automating deployments, the organization aimed to ensure data quality and compliance with internal security protocols.",
+      "results": [
+        "Pioneered the implementation of a comprehensive MLOps strategy, collaborating with the Airline's Cloud Architecture and Security teams to develop an Azure DevOps pipeline that automated project deployments and enforced security and data quality checks. Successfully deployed the first three projects of the data science team using this new MLOps pipeline, accelerating time to value and demonstrating the pipeline's effectiveness in improving the team's workflow.",
+        "The new process streamlined project delivery, reduced manual intervention, and improved transparency and operational efficiency across the organization."
+      ],
+      "images": [
+        {
+          "src": "/portfolio/images/Dataiku_logo.png",
+          "alt": "Dataiku Logo",
+          "caption": "Dataiku - Software for end-to-end AI/ML solutions"
+        }
+      ]
     },
     {
       "cover": "/portfolio/cover-images/insurance-modeling.png",
@@ -12,7 +25,7 @@
       "introduction": "At a major US insurance company, subject matter experts (SMEs) were spending significant time manually reading and responding to hundreds of vendor requests for proposals (RFPs), many of which contained recurring questions and themes. This process was inefficient and delayed response times, putting the company at risk of losing market competitiveness.",
       "motivation": "The client wanted to leverage some GenAI solution that would empower their SMEs and minimize the time and effort they spend answering RFPs with similar themes. This would allow them to focus on higher-value tasks, saving time for them and money for the company. Because of the sensitive nature of their data, their solution needed to work with a locally-hosted model on their in-house infrastructure.",
       "results": [
-        "Designed and led the development of one of the first retrieval-augmented generation (RAG) pipelines for a Dataiku customer, utilizing open-source embeddings and large language models (LLMs) on local GPUs. Built a Dash web application for real-time querying, enabling SMEs to quickly find and reuse relevant answers from past RFPs.",
+        "I designed and led the development of one of the first retrieval-augmented generation (RAG) pipelines for a Dataiku customer, utilizing open-source embeddings and large language models (LLMs) on local GPUs. Built a Dash web application for real-time querying, enabling SMEs to quickly find and reuse relevant answers from past RFPs.",
         "The solution significantly improved RFP response times, saved SMEs days of manual work, and resulted in substantial cost savings for the company. Close collaboration with stakeholders ensured the chatbot met business needs and integrated smoothly into existing workflows."
       ],
       "images": [
