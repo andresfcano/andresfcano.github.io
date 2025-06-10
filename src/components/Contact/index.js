@@ -37,6 +37,7 @@ const Contact = () => {
       <div className="container contact-page">
         <div className="text-zone">
           <h1>
+          <span className="contact-title">
             <AnimatedLetters
               letterClass={letterClass}
               strArray={"Contact me at:".split("")}
@@ -48,6 +49,7 @@ const Contact = () => {
               strArray={"andrescano30@gmail.com".split("")}
               idx={5}
             />
+          </span>
           </h1>
           <p>
             Or leave me a message below to get in touch!
