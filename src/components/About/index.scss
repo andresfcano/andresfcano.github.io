@@ -1,5 +1,5 @@
 .container.about-page {
-  overflow: auto;
+  // overflow: auto;
   .text-zone {
     width: 45% !important;
     padding-right: 1em;
@@ -23,13 +23,12 @@
 
 .stage-cube-cont {
   width: 50%;
-  height: 100%;
+  height: auto;
   top: 0;
   padding-top: 18%;
   margin-left: 0;
-  position: absolute;
+  position: relative;
   right: 0;
-  overflow: hidden;
 }
 
 .cubespinner {
@@ -40,6 +39,7 @@
   transform-style: preserve-3d;
   transform-origin: 100px 100px 0;
   margin-left: calc(50% - 100px);
+  position: relative;
 
   div {
     position: absolute;
@@ -104,20 +104,14 @@
       width: 100% !important;
       padding: 0 10px;
       h1 {
-        font-size: 2em;
+        font-size: 3em;
       }
       h2 {
-        font-size: 1.3em;
+        font-size: 2em;
       }
       p {
-        font-size: 1em;
+        font-size: 1.5em;
       }
-    }
-    .stage-cube-cont {
-      width: 100%;
-      position: static;
-      margin: 30px auto 0 auto;
-      padding-top: 0;
     }
   }
 }
