@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d80f0433.css",
-    "main.js": "/static/js/main.cc419847.js",
+    "main.css": "/static/css/main.18c763a3.css",
+    "main.js": "/static/js/main.22ed6528.js",
     "static/js/453.b3faef14.chunk.js": "/static/js/453.b3faef14.chunk.js",
     "static/media/CV_Andres__2025____Industry.pdf": "/static/media/CV_Andres__2025____Industry.1d67439f4a6ae2603a33.pdf",
     "static/media/atom.png": "/static/media/atom.3b2f620dd7f4e8325006.png",
@@ -11,12 +11,12 @@
     "static/media/CoolveticaRg-Regular.woff": "/static/media/CoolveticaRg-Regular.8307bfa187bccdc55f4d.woff",
     "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/index.html",
-    "main.d80f0433.css.map": "/static/css/main.d80f0433.css.map",
-    "main.cc419847.js.map": "/static/js/main.cc419847.js.map",
+    "main.18c763a3.css.map": "/static/css/main.18c763a3.css.map",
+    "main.22ed6528.js.map": "/static/js/main.22ed6528.js.map",
     "453.b3faef14.chunk.js.map": "/static/js/453.b3faef14.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d80f0433.css",
-    "static/js/main.cc419847.js"
+    "static/css/main.18c763a3.css",
+    "static/js/main.22ed6528.js"
   ]
 }
