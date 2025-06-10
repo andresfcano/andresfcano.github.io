@@ -3,12 +3,25 @@
     {
       "cover": "/portfolio/cover-images/aviation-project.png",
       "title": "Dataiku: Optimized MLOps in Aviation",
-      "description": "CI/CD, Azure DevOps, MLOps"
+      "description": "CI/CD Pipelines, Azure DevOps, MLOps Frameworks"
     },
     {
       "cover": "/portfolio/cover-images/insurance-modeling.png",
       "title": "Dataiku: Offline Chatbot for Insurance",
-      "description": "LLM Application, Custom Chatbots, HuggingFace"
+      "description": "LLM Applications, Custom Chatbots, HuggingFace",
+      "introduction": "At a major US insurance company, subject matter experts (SMEs) were spending significant time manually reading and responding to hundreds of vendor requests for proposals (RFPs), many of which contained recurring questions and themes. This process was inefficient and delayed response times, putting the company at risk of losing market competitiveness.",
+      "motivation": "The client wanted to leverage some GenAI solution that would empower their SMEs and minimize the time and effort they spend answering RFPs with similar themes. This would allow them to focus on higher-value tasks, saving time for them and money for the company. Because of the sensitive nature of their data, their solution needed to work with a locally-hosted model on their in-house infrastructure.",
+      "results": [
+        "Designed and led the development of one of the first retrieval-augmented generation (RAG) pipelines for a Dataiku customer, utilizing open-source embeddings and large language models (LLMs) on local GPUs. Built a Dash web application for real-time querying, enabling SMEs to quickly find and reuse relevant answers from past RFPs.",
+        "The solution significantly improved RFP response times, saved SMEs days of manual work, and resulted in substantial cost savings for the company. Close collaboration with stakeholders ensured the chatbot met business needs and integrated smoothly into existing workflows."
+      ],
+      "images": [
+        {
+          "src": "/portfolio/images/Dataiku_logo.png",
+          "alt": "Dataiku Logo",
+          "caption": "Dataiku - Software for end-to-end AI/ML solutions"
+        }
+      ]
     },
     {
       "cover": "/portfolio/cover-images/alma-array-night.jpg",
@@ -24,7 +37,7 @@
         {
           "src": "/portfolio/images/andres-sergio-alma.JPG",
           "alt": "Sergio & Andres",
-          "caption": "I (left) had the opportunity to visit the ALMA team in the Chilean desert. Here I am with the director of scietnific operations, Sergio (right)."
+          "caption": "I (left) had the opportunity to visit the ALMA team in the Chilean desert. Here I am with Sergio (right), the director of scientific operations."
         },
         {
           "src": "/portfolio/images/Dataiku_logo.png",
