@@ -93,7 +93,7 @@ const Contact = () => {
           <br />
           Data Scientist | Researcher
           <br />
-          Atlanta, GA. 30309. USA <br />
+          Conway, MA. 01341. USA <br />
           <br />
           <span>andrescano30@gmail.com</span>
         </div>
