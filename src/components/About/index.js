@@ -45,7 +45,7 @@ const About = () => {
             What distinguishes me is the scientific mindset I bring to every project—deep curiosity, structured problem solving, and a focus on long-term solutions. My experience working with cross-functional teams allows me to translate complex technical ideas into practical tools that empower others and deliver real value.
           </p>
 
-          <h2>Scientific Research</h2>
+          <h2>Scientific Research & Education</h2>
           <p>
             I completed my M.S. Thesis in Mechanical Engineering at the University of Colorado, Boulder in August 2022
             (Advisor: <a target="_blank" rel="noopener noreferrer" href="https://www.colorado.edu/mechanical/nicole-labbe" class="link">Nicole J. Labbe</a>).
