@@ -1,5 +1,5 @@
 .container.about-page {
-  // overflow: auto;
+  overflow: auto;
   .text-zone {
     width: 45% !important;
     padding-right: 1em;
@@ -23,11 +23,11 @@
 
 .stage-cube-cont {
   width: 50%;
-  height: auto;
+  height: 100%;
   top: 0;
   padding-top: 18%;
   margin-left: 0;
-  position: relative;
+  position: absolute;
   right: 0;
 }
 
