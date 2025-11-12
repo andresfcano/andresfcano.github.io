@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      // SPA fallback for GitHub Pages:
+      // If someone hits a deep URL, send them to index.html with the path preserved in ?p=
+      (function() {
+        var l = window.location;
+        var redirect = l.origin + l.pathname.replace(/\/404\.html$/, '') + '/?p=' +
+                       encodeURIComponent(l.pathname + l.search + l.hash);
+        l.replace(redirect);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
