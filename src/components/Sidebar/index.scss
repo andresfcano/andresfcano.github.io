@@ -156,24 +156,34 @@
       position: fixed;
 
       &.mobile-show {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
 
       a {
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 25px;
+        line-height: 64px;
+        height: 64px;
+
+        svg {
+          opacity: 1 !important;
+          font-size: 2em;
+        }
       }
 
       a:after {
         opacity: 1;
         position: initial;
         width: auto;
-        margin-left: 10PX;
-      }
-
-      a svg {
-        opacity: 1 !important;
+        margin-left: 16px;
+        font-size: 16px;
+        letter-spacing: 2px;
       }
      }
 

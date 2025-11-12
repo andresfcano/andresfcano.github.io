@@ -1,9 +1,18 @@
 import React, { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlane, faFileAlt, faSatelliteDish, faAtom } from '@fortawesome/free-solid-svg-icons'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import Modal from '../Modal'
 import portfolioData from '../../Data/portfolio.json'
 import './index.scss'
+
+const iconMap = {
+  plane: faPlane,
+  file: faFileAlt,
+  satellite: faSatelliteDish,
+  atom: faAtom
+}
 
 const Portfolio = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -23,8 +32,13 @@ const Portfolio = () => {
           <div className="image-box" key={idx} onClick={() => setSelectedItem(port)}>
             <img src={port.cover} className="portfolio-image" alt="portfolio" />
             <div className="content">
-              <p className="title">{port.title}</p>
-              <h4 className="description">{port.description}</h4>
+              <p className="title">
+                <FontAwesomeIcon icon={iconMap[port.icon]} className="project-icon"/>
+                {port.title}
+              </p>
+              <h4 className="description">
+                {port.description}
+              </h4>
               <button className="btn">VIEW</button>
             </div>
           </div>
