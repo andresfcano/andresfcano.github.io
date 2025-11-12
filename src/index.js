@@ -5,12 +5,18 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
 
-// Handle GitHub Pages SPA redirect param once (from public/404.html)
-const url = new URL(window.location.href);
-const p = url.searchParams.get('p');
-if (p) {
-  window.history.replaceState({}, '', p);
-}
+// Handle GitHub Pages SPA redirect once (from /404.html)
+(function () {
+  try {
+    const url = new URL(window.location.href);
+    const p = url.searchParams.get('p');
+    if (p) {
+      // Rewrite /?p=/foo -> /foo BEFORE the router mounts (no re-loop)
+      window.history.replaceState({}, '', p);
+    }
+  } catch (_) {}
+})();
+
 
 ReactDOM.render(
   <React.StrictMode>
