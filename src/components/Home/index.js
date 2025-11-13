@@ -33,7 +33,7 @@ const Home = () => {
               <AnimatedLetters
                 letterClass={letterClass}
                 strArray={nameArray}
-                idx={15}
+                idx={13}
               />
               <br />
               <AnimatedLetters
