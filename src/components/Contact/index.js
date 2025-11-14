@@ -9,6 +9,22 @@ import './index.scss'
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const form = useRef()
+  const [copied, setCopied] = useState(false)
+
+
+  const EMAIL = 'andrescano30@gmail.com'
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(EMAIL).then(() => {
+      setCopied(true)
+
+      // reset after 2 seconds
+      setTimeout(() => setCopied(false), 2000)
+    }).catch(() => {
+      window.alert('Could not copy email. You may copy it manually.')
+    })
+  }
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -54,6 +70,22 @@ const Contact = () => {
           <p>
             Or leave me a message below to get in touch!
           </p>
+
+          <div className="contact-cta-row">
+            <a
+              href={`mailto:${EMAIL}`}
+              className="contact-cta-btn primary-btn"
+            >
+              Email me
+            </a>
+            <button
+              type="button"
+              className={`contact-cta-btn secondary-btn ${copied ? "copied" : ""}`}
+              onClick={handleCopyEmail}
+            >
+              {copied ? "Copied!" : "Copy email"}
+            </button>
+          </div>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
               <ul>

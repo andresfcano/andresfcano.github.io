@@ -124,6 +124,57 @@
   }
 }
 
+.contact-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.contact-cta-btn {
+  border-radius: 4px;
+  padding: 10px 18px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid #ffd700;
+  background: transparent;
+  color: #ffd700;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-cta-btn:hover {
+  filter: brightness(1.1);
+}
+
+.primary-btn {
+  background: #ffd700;
+  color: #000;
+}
+
+.primary-btn:hover {
+  background: #ffe760;
+}
+
+.secondary-btn {
+  background: transparent;
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 215, 0, 0.12);
+}
+.secondary-btn.copied {
+  background: rgba(0, 255, 127, 0.25);  /* optional green glow */
+  color: #00ff7f;
+  border-color: #00ff7f;
+}
+
+
 @media screen and (max-width: 1200px) {
   .map-wrap {
     float: none;

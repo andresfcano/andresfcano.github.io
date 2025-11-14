@@ -31,14 +31,14 @@
     width: 100%;
 
     a {
-      font-size: 22px;
+      font-size: 25px;
       color: #4d4d4e;
       display: block;
       line-height: 51px;
       height: 51px;
       position: relative;
       text-decoration: none;
-
+      
       i {
         transition: all 0.3s ease-out;
       }
@@ -57,12 +57,14 @@
 
       &:after {
         content: '';
-        font-size: 9px;
+        font-size: 12px;
         letter-spacing: 2px;
         position: absolute;
         bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);   /* horizontal centering */
         display: block;
-        width: 100%;
+        width: max-content;             /* fit the text, ignore extra width */
         text-align: center;
         opacity: 0;
         -webkit-transition: all 0.3s ease-out;
@@ -75,6 +77,35 @@
         }
       }
     }
+
+    /* Improve focus + click targets */
+    a {
+      border-radius: 10px;            /* soft pill corners */
+      outline: none;                  /* we’ll draw our own focus ring */
+      transition: background .2s ease, color .2s ease, filter .2s ease;
+      padding-inline: 10px;           /* slightly larger target */
+    }
+
+    /* Keyboard focus should behave like hover (and be visible) */
+    a:focus-visible {
+      color: #ffd700;
+      background: rgba(255, 215, 0, 0.15);
+      box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.6);  /* clear focus ring */
+
+      /* mirror your hover behavior */
+      svg { opacity: 0; }
+      &::after { opacity: 1; }
+    }
+
+    /* Active route is clearly highlighted */
+    a.active {
+      background: rgba(255, 215, 0, 0.15);
+      color: #ffd700;
+
+      /* You already color the icon; keep that too */
+      svg { color: #ffd700; }
+    }
+
 
     a.about-link {
       &:after {
@@ -175,6 +206,12 @@
           opacity: 1 !important;
           font-size: 2em;
         }
+      }
+
+      a:focus-visible {
+        color: #ffd700;
+        background: rgba(255, 215, 0, 0.15);
+        box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.6);
       }
 
       a:after {

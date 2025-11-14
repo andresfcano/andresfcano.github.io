@@ -16,7 +16,16 @@ const iconMap = {
 
 const Portfolio = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const [selectedItem, setSelectedItem] = useState(null)
+  const [selectedProject, setSelectedProject] = useState(null)
+
+  // function to open modal with a given project
+  const openProject = (project) => {
+    setSelectedProject(project);
+  };
+  // function to close modal
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -29,23 +38,53 @@ const Portfolio = () => {
     return (
       <div className="images-container">
         {portfolio.map((port, idx) => (
-          <div className="image-box" key={idx} onClick={() => setSelectedItem(port)}>
-            <img src={port.cover} className="portfolio-image" alt="portfolio" />
+          <div
+            className="image-box"
+            key={idx}
+            tabIndex="0"
+            role="button"
+            aria-label={`Open project: ${port.title}`}
+            onClick={() => openProject(port)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                openProject(port)
+              }
+            }}
+          >
+            <img
+              src={port.cover}
+              className="portfolio-image"
+              alt={port.title}
+              loading="lazy"
+            />
             <div className="content">
               <p className="title">
-                <FontAwesomeIcon icon={iconMap[port.icon]} className="project-icon"/>
+                <FontAwesomeIcon
+                  icon={iconMap[port.icon]}
+                  className="project-icon"
+                />
                 {port.title}
               </p>
-              <h4 className="description">
-                {port.description}
-              </h4>
-              <button className="btn">VIEW</button>
+              <h4 className="description">{port.description}</h4>
+              <button
+                type="button"
+                className="btn"
+                aria-label={`Open ${port.title} case study`}
+                onClick={(e) => {
+                  e.stopPropagation()
+                  openProject(port)
+                }}
+              >
+                View case study
+              </button>
             </div>
           </div>
         ))}
       </div>
     )
   }
+
 
   return (
     <>
@@ -55,9 +94,14 @@ const Portfolio = () => {
         </h1>
         <div>{renderPortfolio(portfolioData.portfolios)}</div>
       </div>
-      {selectedItem && (
-        <Modal open={!!selectedItem} onClose={() => setSelectedItem(null)} data={selectedItem} />
+      {selectedProject && (
+        <Modal
+          open={Boolean(selectedProject)}
+          data={selectedProject}
+          onClose={closeModal}
+        />
       )}
+
       <Loader type="ball-scale-ripple-multiple"/>
     </>
   )

@@ -30,32 +30,36 @@ const Sidebar = () => {
       <nav className={showNav ? 'mobile-show' : ''}>
         <NavLink
           exact="true"
-          activeclassname="active"
+          className={({ isActive }) => (isActive ? 'active' : '')}
           to="/"
-          onClick={() => setShowNav(false)}>
+          end
+          onClick={() => setShowNav(false)}
+          aria-label="Home" 
+          title="Home">
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </NavLink>
         <NavLink
-          activeclassname="active"
-          className="about-link"
+          className={({ isActive }) => (isActive ? 'active about-link' : 'about-link')}
           to="/about"
-          onClick={() => setShowNav(false)}>
+          onClick={() => setShowNav(false)}
+          aria-label="About" 
+          title="About">
           <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
         </NavLink>
         <NavLink
-          activeclassname="active"
-          className="portfolio-link"
+          className={({ isActive }) => (isActive ? 'active portfolio-link' : 'portfolio-link')}
           to="/portfolio"
           onClick={() => setShowNav(false)}
-        >
+          aria-label="Projects" 
+          title="Projects">
           <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
         </NavLink>
         <NavLink
-          activeclassname="active"
-          className="contact-link"
+          className={({ isActive }) => (isActive ? 'active contact-link' : 'contact-link')}
           to="/contact"
           onClick={() => setShowNav(false)}
-        >
+          aria-label="Contact" 
+          title="Contact">
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </NavLink>
         <FontAwesomeIcon
