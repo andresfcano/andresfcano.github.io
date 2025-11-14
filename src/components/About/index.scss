@@ -1,19 +1,45 @@
 .container.about-page {
   overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 3rem;
+
   .text-zone {
-    width: 45% !important;
+    flex: 1 1 320px;
+    max-width: 40rem;
     padding-right: 1em;
+
     h1 {
-      font-size: 4em; /* Adjust this value as needed */
+      font-size: 4em; /* Adjust as you like */
     }
+
     h2 {
-      font-size: 3em; /* Adjust this value as needed */
+      font-size: 3em;
       color: #fff;
     }
+
     p {
-      font-size: 1.8em; /* Adjust this value as needed */
+      font-size: 1.8em;
     }
   }
+}
+
+/* Right column: cube / visuals */
+.container.about-page .stage-cube-cont {
+  flex: 1 1 260px;
+  position: relative;
+  width: auto;
+  height: auto;
+  padding-top: 0;
+  margin-left: 0;
+  right: auto;
+  top: auto;
+}
+
+/* Right: the visual/extra column (adjust class name if yours differs) */
+.container.about-page .text-zone + div {
+  flex: 1 1 260px;
 }
 
 .link {
@@ -100,9 +126,12 @@
 
 @media screen and (max-width: 600px) {
   .container.about-page {
+    flex-direction: column;
+
     .text-zone {
-      width: 100% !important;
+      width: 100%;  /* no !important needed */
       padding: 0 10px;
+
       h1 {
         font-size: 3em;
       }
@@ -114,6 +143,7 @@
       }
     }
   }
+
   .stage-cube-cont {
     display: none;
   }

@@ -48,3 +48,24 @@ textarea {
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
 }
+
+:root {
+  --page-max-width: 72ch;   // ideal text width
+}
+
+/* Make long paragraphs easier to read */
+p {
+  line-height: 1.6;
+}
+
+/* Constrain main text blocks */
+.container .text-zone {
+  max-width: var(--page-max-width);
+}
+
+@media (max-width: 768px) {
+  .container .text-zone {
+    max-width: 100%;
+  }
+}
+
