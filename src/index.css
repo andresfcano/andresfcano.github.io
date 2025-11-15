@@ -9,17 +9,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #1F2421;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   display: block;
 }
 
 .dashboard {
   margin-top: 200px;
   margin-left: 200px;
-}
-
-@media screen and (max-width: 1200px) {
-  body {
-    overflow: visible;
-  }
 }

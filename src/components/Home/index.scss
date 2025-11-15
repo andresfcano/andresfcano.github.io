@@ -36,7 +36,7 @@
     grid-gap: 15px;
   }
 
-  .flat-button {
+    .flat-button {
     text-align: center;
     color: #ffd700;
     font-size: 13px;
@@ -51,9 +51,33 @@
     animation: fadeInAnimation 1s 1.8s backwards;
     white-space: nowrap;
 
+    /* NEW: rounded corners + shadow + animation */
+    border-radius: 9999px;                 /* pill shape */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    background: transparent;
+    transition:
+      background-color 0.18s ease,
+      color 0.18s ease,
+      transform 0.18s ease,
+      box-shadow 0.18s ease;
+    
     &:hover {
       background: #ffd700;
       color: #333;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+    }
+
+    &:focus-visible {
+      outline: 2px solid #ffd700;
+      outline-offset: 3px;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
     }
   }
 }
@@ -69,25 +93,37 @@
     position: initial;
     width: 100%;
     transform: none;
-    padding: 10px;
+    padding: 16px 18px;
     box-sizing: border-box;
+  }
+
+  /* Smaller headings on tablet / phone */
+  .home-page h1 {
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  .home-page .job-title {
+    font-size: 28px;
   }
 
   .home-page .flat-button {
     float: none;
     display: block;
-    margin: 20px auto 0 auto;
-    width: 124px;
+    margin: 16px auto 0 auto;
+    width: 140px;
+    font-size: 12px;
+    padding: 8px 14px;
   }
 
   .logo-container {
     position: relative;
-    width: 300px;
+    width: 260px;
     height: auto;
-    top: 50px;
+    top: 40px;
     right: 0;
     box-sizing: border-box;
-    margin: auto;
+    margin: 24px auto 0 auto;
     left: 0;
   }
 
@@ -102,9 +138,28 @@
 }
 
 @media screen and (max-width: 600px) {
+  .home-page h1 {
+    font-size: 28px;
+    line-height: 1.1;
+  }
+
+  .home-page .text-zone .job-title {
+    font-size: 28px;
+  }
+
   .home-buttons-container {
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-top: 50px;
+  }
+  
+
+  .home-page .flat-button {
+    width: 60%;
+    max-width: 300px;
+    padding: 12px 0;
+    font-size: 14px;
   }
 }
+

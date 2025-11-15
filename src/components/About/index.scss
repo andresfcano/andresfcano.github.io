@@ -1,17 +1,14 @@
 .container.about-page {
   overflow: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 3rem;
+  position: relative;   // for the absolute cube
 
   .text-zone {
-    flex: 1 1 320px;
-    max-width: 40rem;
-    padding-right: 1em;
+    width: 45% !important;         // adjust 50–60% to taste
+    padding-right: 2rem;
+    margin-top: 40px;   // so text doesn’t sit too high
 
     h1 {
-      font-size: 4em; /* Adjust as you like */
+      font-size: 4em;
     }
 
     h2 {
@@ -21,25 +18,9 @@
 
     p {
       font-size: 1.8em;
+      line-height: 1.4;
     }
   }
-}
-
-/* Right column: cube / visuals */
-.container.about-page .stage-cube-cont {
-  flex: 1 1 260px;
-  position: relative;
-  width: auto;
-  height: auto;
-  padding-top: 0;
-  margin-left: 0;
-  right: auto;
-  top: auto;
-}
-
-/* Right: the visual/extra column (adjust class name if yours differs) */
-.container.about-page .text-zone + div {
-  flex: 1 1 260px;
 }
 
 .link {
@@ -47,16 +28,18 @@
   font-weight: bold;
 }
 
+/* Cube container on the right */
 .stage-cube-cont {
-  width: 50%;
-  height: 100%;
+  position: absolute;
   top: 0;
+  right: 0;
+  width: 50%;      // adjust 35–45% if needed
+  height: 100%;
   padding-top: 18%;
   margin-left: 0;
-  position: absolute;
-  right: 0;
 }
 
+/* Spinning cube itself */
 .cubespinner {
   animation-name: spincube;
   animation-timing-function: ease-in-out;
@@ -64,7 +47,7 @@
   animation-duration: 12s;
   transform-style: preserve-3d;
   transform-origin: 100px 100px 0;
-  margin-left: calc(50% - 100px);
+  margin-left: calc(50% - 100px);  // centered inside stage-cube-cont
   position: relative;
 
   div {
@@ -79,27 +62,14 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 20px 0px lightyellow;
-
   }
 
-  .face1 {
-    transform: translateZ(100px);
-  }
-  .face2 {
-    transform: rotateY(90deg) translateZ(100px);
-  }
-  .face3 {
-    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
-  }
-  .face4 {
-    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
-  }
-  .face5 {
-    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
-  }
-  .face6 {
-    transform: rotateX(-90deg) translateZ(100px);
-  }
+  .face1 { transform: translateZ(100px); }
+  .face2 { transform: rotateY(90deg) translateZ(100px); }
+  .face3 { transform: rotateY(90deg) rotateX(90deg) translateZ(100px); }
+  .face4 { transform: rotateY(180deg) rotateZ(90deg) translateZ(100px); }
+  .face5 { transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px); }
+  .face6 { transform: rotateX(-90deg) translateZ(100px); }
 }
 
 @keyframes spincube {
@@ -124,12 +94,11 @@
   }
 }
 
+/* Mobile: stack text, hide cube */
 @media screen and (max-width: 600px) {
   .container.about-page {
-    flex-direction: column;
-
     .text-zone {
-      width: 100%;  /* no !important needed */
+      width: 100%;
       padding: 0 10px;
 
       h1 {

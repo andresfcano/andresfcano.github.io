@@ -1,23 +1,22 @@
 .page {
   width: 100%;
-  height: 100%;
-  position: absolute;
+  min-height: 100vh;
+  position: relative;
 }
 
 .container {
   width: 100%;
   will-change: contents;
-  height: 90%;
-  min-height: 566px;
-  position: absolute;
+  min-height: 100vh;        // fill the viewport, but can grow taller
+  position: relative;       // back in normal flow
   opacity: 0;
-  top: 5%;
   margin: 0 auto;
   z-index: 1;
   transform-style: preserve-3d;
   animation: fadeIn 1s forwards;
   animation-delay: 1s;
 }
+
 
 .container.contact-page,
 .container.about-page,
