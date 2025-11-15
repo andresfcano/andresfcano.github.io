@@ -187,23 +187,37 @@
       position: fixed;
 
       &.mobile-show {
-        display:inline-flex;
+        display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: center;   // ⬅ left-align all rows
         height: 100vh;
-        gap: 1rem;      // space between menu items
+        gap: 1rem;
+        padding: 0 2.5rem;         // indent from screen edge
       }
 
+
       a {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 6rem;      // space between icon and text
-        font-size: 16px;  // smaller text on mobile
+        display: grid;
+        grid-template-columns: 3rem auto;  // col 1: icon, col 2: text
+        align-items: center;               // vertical centering in the row
+        justify-content: flex-start;
+        column-gap: 12rem;                 // space between icon and text
+        width: 100%;
+        max-width: 260px;                  // makes all pills same width
+        font-size: 16px;
         line-height: 1.2;
         height: auto;
         padding: 0.8rem 1.2rem;
+      }
+
+
+      a svg {
+        display: block;
+        opacity: 1 !important;
+        font-size: 5rem;   // still big, but you can tweak
+        flex-shrink: 0;
+        justify-self: start;
       }
 
       a:after {
@@ -211,17 +225,10 @@
         position: static;
         display: inline-block;
         width: auto;
-        margin-left: 0;       // gap is handled by flex gap
         font-size: 16px;
         letter-spacing: 2px;
         line-height: 1;
-      }
-
-      a svg {
-        display: block;
-        opacity: 1 !important;
-        font-size: 4.5rem;    // smaller icon
-        flex-shrink: 0;
+        justify-self: start;
       }
     }
 
