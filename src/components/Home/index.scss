@@ -10,6 +10,16 @@
     .job-title {
       font-size: 52px;
     }
+
+    .job-title-mobile {
+      display: none;
+    }
+  }
+  .hi-plain {
+    display: none;
+  }
+  .hi-animated {
+    display: inline;
   }
 
   h1 {
@@ -143,8 +153,28 @@
     line-height: 1.1;
   }
 
-  .home-page .text-zone .job-title {
-    font-size: 28px;
+  /* Swap animated "Hi, I'm" for plain version */
+  .home-page .hi-animated {
+    display: none;
+  }
+
+  .home-page .hi-plain {
+    display: block;
+    font-size: 28px;        // match your mobile heading size
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
+  }
+
+  /* Hide animated job title, show clean mobile version */
+  .home-page .job-title-desktop {
+    display: none;
+  }
+
+  .home-page .text-zone .job-title-mobile {
+    display: block;
+    font-size: 28px;       // tweak as you like
+    line-height: 1.2;
+    margin-top: 0.4rem;
   }
 
   .home-buttons-container {
@@ -153,7 +183,6 @@
     width: 100%;
     margin-top: 50px;
   }
-  
 
   .home-page .flat-button {
     width: 60%;
@@ -161,5 +190,7 @@
     padding: 12px 0;
     font-size: 14px;
   }
+
 }
+
 

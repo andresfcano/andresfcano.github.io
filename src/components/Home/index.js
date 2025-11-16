@@ -23,26 +23,35 @@ const Home = () => {
       <div className="container home-page">
         <div className="text-zone">
           <h1>
-            <span className={letterClass}>H</span>
-            <span className={`${letterClass} _12`}>i,</span>
-            <br />
-            <span className={`${letterClass} _13`}>I</span>
-            <span className={`${letterClass} _14`}>'m</span>
-
-            <span className="job-title">
-              <AnimatedLetters
-                letterClass={letterClass}
-                strArray={nameArray}
-                idx={13}
-              />
+            {/* Desktop / animated version */}
+            <span className="hi-animated">
+              <span className={letterClass}>H</span>
+              <span className={`${letterClass} _12`}>i,</span>
               <br />
-              <AnimatedLetters
-                letterClass={letterClass}
-                strArray={jobArray}
-                idx={9}
-              />
+              <span className={`${letterClass} _13`}>I</span>
+              <span className={`${letterClass} _14`}>'m</span>
+            </span>
+
+            {/* Mobile / plain version */}
+            <span className="hi-plain">
+              Hi,
+            </span>
+
+            {/* Name + job title (desktop version) */}
+            <span className="job-title job-title-desktop">
+              <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={13} />
+              <br />
+              <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={9} />
+            </span>
+
+            {/* Name + job title (mobile version) */}
+            <span className="job-title job-title-mobile">
+              I'm Andres F. Cano Botero
+              <br />
+              Data Scientist &amp; Researcher
             </span>
           </h1>
+
           <div className="home-buttons-container">
             <a href={myCV} className="flat-button" target="_blank" rel="noopener noreferrer">MY CV</a>
             <Link to="/portfolio" className="flat-button">PROJECTS</Link>
