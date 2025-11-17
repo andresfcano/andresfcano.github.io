@@ -1,24 +1,49 @@
+/* ===== DESKTOP / DEFAULT ===== */
+
 .container.about-page {
-  overflow: auto;
-  position: relative;   // for the absolute cube
+  position: relative;
+  padding: 100px 0 40px;      /* top + bottom padding for the whole page */
+  min-height: auto;
 
   .text-zone {
-    width: 45% !important;         // adjust 50–60% to taste
+    position: relative;      /* stay in normal document flow */
+    margin-left: 10%;        /* indent from sidebar */
+    width: 60%;              /* wider text column */
+    max-width: 780px;
     padding-right: 2rem;
-    margin-top: 40px;   // so text doesn’t sit too high
+    margin-top: 0;
 
     h1 {
-      font-size: 4em;
+      font-size: 53px;
+      font-family: 'Coolvetica';
+      color: #E0E9FF;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 40px;
+      position: relative;
+      left: -10px;
     }
 
     h2 {
       font-size: 3em;
       color: #fff;
+      animation: fadeIn 1s forwards;
     }
 
     p {
       font-size: 1.8em;
       line-height: 1.4;
+      color: #fff;
+      font-family: sans-serif;
+      font-weight: 300;
+      max-width: 100%;
+      animation: fadeIn 1s forwards;
+    }
+
+    .text-animate-hover {
+      &:hover {
+        color: #ffd700;
+      }
     }
   }
 }
@@ -31,11 +56,12 @@
 /* Cube container on the right */
 .stage-cube-cont {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;      // adjust 35–45% if needed
-  height: 100%;
-  padding-top: 18%;
+  top: 30%;
+  right: 8%;
+  transform: translateY(-50%);
+  width: 32%;               /* a bit narrower so it doesn’t cause overflow */
+  height: auto;
+  padding-top: 0;
   margin-left: 0;
 }
 
@@ -47,7 +73,7 @@
   animation-duration: 12s;
   transform-style: preserve-3d;
   transform-origin: 100px 100px 0;
-  margin-left: calc(50% - 100px);  // centered inside stage-cube-cont
+  margin-left: calc(50% - 100px);
   position: relative;
 
   div {
@@ -94,26 +120,38 @@
   }
 }
 
-/* Mobile: stack text, hide cube */
+/* ===== MOBILE (≤ 600px) ===== */
+
 @media screen and (max-width: 600px) {
   .container.about-page {
+    padding: 24px 22px 64px;   /* bigger side + bottom padding */
+
     .text-zone {
+      margin: 0;               /* no left indent on mobile */
       width: 100%;
-      padding: 0 10px;
+      max-width: none;
+      padding: 0;
 
       h1 {
-        font-size: 3em;
+        font-size: 26px;       /* smaller title */
+        line-height: 1.15;
+        margin-bottom: 18px;
+        left: 0;
       }
+
       h2 {
-        font-size: 2em;
+        font-size: 20px;
+        margin: 24px 0 10px;
       }
+
       p {
-        font-size: 1.5em;
+        font-size: 15px;       /* smaller body text */
+        line-height: 1.6;
       }
     }
   }
 
   .stage-cube-cont {
-    display: none;
+    display: none;             /* hide cube on small screens */
   }
 }
