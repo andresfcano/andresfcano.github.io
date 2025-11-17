@@ -1,142 +1,163 @@
-.portfolio-page {
-  padding-left: 100px;
-  padding-right: 50px;
-  width: calc(100% - 150px);
-  text-align: left;
-  position: initial;
-  height: 100%;
-  overflow: auto;
+.container.portfolio-page {
+  padding: 80px 0 40px;
+}
 
-  h1.page-title {
-    margin-left: 100px;
-    margin-top: 100px;
+/* Page title */
+.container.portfolio-page .page-title {
+  font-size: 52px;
+  margin-left: 10%;
+  margin-bottom: 32px;
+}
+
+/* Wrapper for all cards */
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 10%;
+  box-sizing: border-box;
+}
+
+/* Individual card */
+.image-box {
+  background: #101414;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(25% - 15px);      /* ~4 per row on large screens */
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.image-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.7);
+}
+
+/* Project image */
+.image-box .portfolio-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text area */
+.image-box .content {
+  flex: 1;
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Title + icon */
+.image-box .title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  line-height: 1.2;
+  color: #f5f7ff;
+  margin: 0 0 4px;
+}
+
+/* the FontAwesome icon */
+.image-box .project-icon {
+  font-size: 16px;
+  color: #ffd700;
+}
+
+/* One-line description subtitle */
+.image-box .description {
+  font-size: 12px;
+  line-height: 1.35;
+  color: #dde1ff;
+  margin: 0 0 8px;
+}
+
+/* Button */
+.image-box .btn {
+  align-self: flex-start;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid #ffd700;
+  background: transparent;
+  color: #ffd700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.image-box .btn:hover {
+  background: #ffd700;
+  color: #121614;
+  transform: translateY(-1px);
+}
+
+/* ====== RESPONSIVE LAYOUTS ====== */
+
+/* Medium screens: 3 per row */
+@media screen and (max-width: 1024px) {
+  .image-box {
+    flex: 0 0 calc(33.333% - 14px);
+    max-width: calc(33.333% - 14px);
+  }
+}
+
+/* Phones / small tablets: 2 per row */
+@media screen and (max-width: 768px) {
+  .container.portfolio-page {
+    padding: 64px 0 32px;
+  }
+
+  .container.portfolio-page .page-title {
+    font-size: 36px;
+    margin-left: 16px;
+    margin-bottom: 24px;
   }
 
   .images-container {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    padding-bottom: 100px;
+    padding: 0 12px;
+    justify-content: center;
   }
 
   .image-box {
-    position: relative;
-    flex: 1 1 20%;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 10px;
-    max-width: calc(25% - 10px);
-    cursor: pointer;
+    flex: 0 0 calc(50% - 12px);   /* ⬅ 2 cards per row */
+    max-width: calc(50% - 12px);
+    height: 260px;                 /* give them more vertical space */
+  }
 
-    .portfolio-image {
-      position: absolute;
-      z-index: 2;
-      width: 100%;
-      object-fit: cover;
-    }
+  .image-box .portfolio-image {
+    height: 120px;
+  }
 
-    .content {
-      position: absolute;
-      width: 100%;
-      max-width: 100%;
-      box-sizing: border-box;
-      z-index: 3;
-      padding: 10px 20px;
-      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.2) 0,
-        rgba(0, 0, 0, 1)
-      );
-      bottom: -70px;
-    }
+  .image-box .title {
+    font-size: 14px;
+  }
 
-    .title {
-      margin-bottom: 0;
-      margin-top: 0;
-      color: #fff;
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 24px;
+  .image-box .description {
+    font-size: 11px;
+  }
 
-      .project-icon {
-        margin-right: 8px;
-        color: #ffd700; // or any color you like
-        font-size: 1em;
-        vertical-align: middle;
-      }
-    }
-
-    .description {
-      font-size: 14px;
-      margin-bottom: 5px;
-      color: #fff;
-      font-weight: 700;
-    }
-
-    .btn {
-      margin-top: 30px;
-      margin-bottom: 10px;
-      padding: 0 23px;
-      height: 35px;
-      line-height: 34px;
-      border: 2px solid #ffd700;
-      border-radius: 4px;
-      font-size: 14px;
-      color: #fff;
-      background: transparent;
-      font-weight: 700;
-      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      background: #ffd700;
-    }
-
-    &:after {
-      content: "";
-      background: linear-gradient(180deg, #ffd700, #000);
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-      opacity: 0;
-    }
-
-    &:hover:after {
-      opacity: 0.85;
-    }
-
-    &:hover .content {
-      bottom: 0;
-      background: transparent
-    }
+  .image-box .btn {
+    font-size: 10px;
+    padding: 4px 8px;
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .container.portfolio-page {
-    width: 100%;
-    padding: 20px;
-    // border-sizing prevent horizontal scroll bars
-    box-sizing: border-box;
+/* Very small phones: still 2 per row but taller cards */
+@media screen and (max-width: 480px) {
+  .image-box {
+    height: 280px;
+  }
 
-    h1.page-title {
-      margin-left: 20px;
-      margin-top: 20px;
-    }
-
-    .image-box {
-      height: 200px;
-      max-width: calc(50% - 10px);
-    }
+  .image-box .portfolio-image {
+    height: 130px;
   }
 }
-

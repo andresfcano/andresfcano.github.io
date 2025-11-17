@@ -126,6 +126,7 @@
   .container.about-page {
     padding: 24px 16px 40px;   /* top, left/right, bottom */
     box-sizing: border-box;    /* ⬅ include padding inside 100% width */
+    overflow-x: hidden;
 
     .text-zone {
       margin: 0;
