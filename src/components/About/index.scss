@@ -124,16 +124,17 @@
 
 @media screen and (max-width: 600px) {
   .container.about-page {
-    padding: 24px 22px 64px;   /* bigger side + bottom padding */
+    padding: 24px 16px 40px;   /* top, left/right, bottom */
+    box-sizing: border-box;    /* ⬅ include padding inside 100% width */
 
     .text-zone {
-      margin: 0;               /* no left indent on mobile */
+      margin: 0;
       width: 100%;
       max-width: none;
       padding: 0;
 
       h1 {
-        font-size: 26px;       /* smaller title */
+        font-size: 26px;
         line-height: 1.15;
         margin-bottom: 18px;
         left: 0;
@@ -145,13 +146,14 @@
       }
 
       p {
-        font-size: 15px;       /* smaller body text */
+        font-size: 15px;
         line-height: 1.6;
       }
     }
   }
 
   .stage-cube-cont {
-    display: none;             /* hide cube on small screens */
+    display: none;
   }
 }
+
