@@ -67,9 +67,6 @@ const Contact = () => {
             />
           </span>
           </h1>
-          <p>
-            Or leave me a message below to get in touch!
-          </p>
 
           <div className="contact-cta-row">
             <a
@@ -86,6 +83,9 @@ const Contact = () => {
               {copied ? "Copied!" : "Copy email"}
             </button>
           </div>
+          <p>
+            Or leave me a message below to get in touch!
+          </p>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
               <ul>

@@ -86,8 +86,8 @@
   background: rgba(8, 253, 216, 0.1);
   float: right;
   width: 53%;
-  height: 115%;
-  margin-top: -3%;
+  height: 600px;
+  margin-top: 130px;
 }
 
 .leaflet-container {
@@ -102,8 +102,8 @@
 .info-map {
   position: absolute;
   background: #000;
-  top: 50px;
-  right: 30%;
+  top: 150px;
+  right: 2%;
   z-index: 999999;
   width: 300px;
   padding: 20px;
@@ -185,5 +185,35 @@
 
   .info-map {
     display: none;
+  }
+}
+
+/* Mobile typography for contact page */
+@media screen and (max-width: 600px) {
+  .container.contact-page {
+    padding: 24px 5px 48px;   /* nice side + bottom padding */
+  }
+
+  /* Override the big layout h1 on mobile */
+  .container.contact-page h1 {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 10px;       /* tighten space to the paragraph */
+  }
+
+  /* Title text itself (AnimatedLetters span) */
+  .contact-title {
+    font-size: 35px;
+    line-height: 1.2;
+  }
+
+  /* First paragraph under the title */
+  .container.contact-page p {
+    font-size: 18px !important;
+    margin-top: 4px;
+  }
+
+  .contact-cta-row {
+    margin: 1.5rem 0 1.5rem;     /* slightly tighter */
   }
 }

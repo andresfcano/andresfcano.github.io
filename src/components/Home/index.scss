@@ -1,6 +1,7 @@
 .home-page {
+  min-height: 100vh;
   .text-zone {
-    position: absolute;
+    position: relative;
     left: 10%;
     top: 50%;
     transform: translateY(-50%);
@@ -91,6 +92,16 @@
     }
   }
 }
+
+/* Desktop-only layout for home page */
+@media screen and (min-width: 1201px) {
+  .home-page {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+  }
+}
+
 
 @media screen and (max-width: 1200px) {
   .tags,

@@ -79,11 +79,46 @@
 }
 
 
-// For phones:
-// @media (max-width: 600px) {
-//   .modal-image-gallery figure {
-//     flex: 1 1 100%;
-//     max-width: 100%;
-//   }
-// }
+/* ===== MOBILE MODAL (≤ 600px) ===== */
+@media (max-width: 600px) {
+  .portfolio-modal {
+    width: 95%;
+    padding: 1.2rem;          // a bit tighter padding on phones
+
+    h1 {
+      font-size: 1.75rem;
+      margin-bottom: 0.6rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+      line-height: 1.4;
+    }
+  }
+
+  .modal-image-gallery {
+    max-width: 100%;
+    padding: 0.5rem 0;        // less padding around gallery
+    gap: 0.75rem;
+  }
+
+  .modal-image-gallery figure {
+    flex: 1 1 100%;           // one per row
+    max-width: 100%;
+  }
+
+  .modal-image-gallery figure img {
+    max-height: 170px;        // ⬅ smaller image height on mobile
+  }
+
+  .modal-image-gallery figure figcaption {
+    font-size: 1.35rem;       // ⬅ smaller caption text
+    padding: 0 0.5rem;
+  }
+}
+
 

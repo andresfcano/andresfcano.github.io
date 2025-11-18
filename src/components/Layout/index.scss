@@ -1,13 +1,13 @@
 .page {
   width: 100%;
-  // min-height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 
 .container {
   width: 100%;
   will-change: contents;
-  // min-height: 100vh;        // fill the viewport, but can grow taller
+  min-height: 100vh;        // fill the viewport, but can grow taller
   position: relative;       // back in normal flow
   opacity: 0;
   margin: 0 auto;
@@ -16,7 +16,6 @@
   animation: fadeIn 1s forwards;
   animation-delay: 1s;
 }
-
 
 .container.contact-page,
 .container.portfolio-page {
