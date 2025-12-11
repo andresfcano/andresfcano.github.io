@@ -1,163 +1,323 @@
 .container.portfolio-page {
-  padding: 80px 0 40px;
+  padding: 72px 0 48px;
+  width: 96vw;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-/* Page title */
 .container.portfolio-page .page-title {
-  font-size: 52px;
+  font-size: 48px;
   margin-left: 10%;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
-/* Wrapper for all cards */
-.images-container {
+.page-subtitle {
+  margin: 0 10% 16px;
+  color: #cdd9ff;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.filter-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  gap: 10px;
   padding: 0 10%;
-  box-sizing: border-box;
+  margin-bottom: 16px;
 }
 
-/* Individual card */
-.image-box {
-  background: #101414;
+.pill {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: #e6edff;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pill.active {
+  background: linear-gradient(135deg, #ffd700, #ffb347);
+  color: #0f1628;
+  border-color: transparent;
+  box-shadow: 0 10px 28px rgba(255, 215, 0, 0.25);
+}
+
+.carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 0 6%;
+  margin-bottom: 18px;
+}
+
+.nav {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #f4f7ff;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.nav:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 215, 0, 0.16);
+  color: #ffd700;
+}
+
+.track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(240px, 1fr);
+  gap: 12px;
+  overflow: hidden;
+  padding: 4px 2px 8px;
+}
+
+.card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
   display: flex;
   flex-direction: column;
-  flex: 0 0 calc(25% - 15px);      /* ~4 per row on large screens */
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  min-height: 280px;
+  min-width: 240px;
+  cursor: pointer;
+  transform: scale(0.96);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.image-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.7);
+.card.active {
+  transform: scale(1);
+  border-color: rgba(255, 215, 0, 0.6);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
 }
 
-/* Project image */
-.image-box .portfolio-image {
+.card:hover {
+  transform: scale(1.01);
+}
+
+.media {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-body {
+  padding: 12px 14px 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f5f7ff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.project-icon {
+  color: #ffd700;
+  font-size: 16px;
+}
+
+.card-subtitle {
+  margin: 0;
+  color: #cfd9ff;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag-row span {
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e6edff;
+  font-size: 12px;
+}
+
+.details {
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  margin: 0 6%;
+}
+
+.details-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 12px;
+}
+
+.kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #9fb3e0;
+  font-size: 12px;
+}
+
+.details h2 {
+  margin: 4px 0 4px;
+  color: #f7f9ff;
+  font-size: 24px;
+}
+
+.subtitle {
+  margin: 0 0 6px;
+  color: #d0dcff;
+  font-size: 14px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.tags span {
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e6edff;
+  font-size: 12px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.panel h3 {
+  margin: 0 0 6px;
+  color: #f4f7ff;
+  font-size: 16px;
+}
+
+.panel p {
+  margin: 0 0 8px;
+  color: #cdd9ff;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.panel ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #dce6ff;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.gallery .thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.gallery figure {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gallery img {
   width: 100%;
-  height: 250px;
+  height: 120px;
   object-fit: cover;
   display: block;
 }
 
-/* Text area */
-.image-box .content {
-  flex: 1;
-  padding: 10px 12px 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Title + icon */
-.image-box .title {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 15px;
-  line-height: 1.2;
-  color: #f5f7ff;
-  margin: 0 0 4px;
-}
-
-/* the FontAwesome icon */
-.image-box .project-icon {
-  font-size: 16px;
-  color: #ffd700;
-}
-
-/* One-line description subtitle */
-.image-box .description {
+.gallery figcaption {
+  padding: 8px 10px;
+  color: #d5e2ff;
   font-size: 12px;
-  line-height: 1.35;
-  color: #dde1ff;
-  margin: 0 0 8px;
 }
 
-/* Button */
-.image-box .btn {
-  align-self: flex-start;
-  font-size: 11px;
-  padding: 4px 10px;
-  border-radius: 9999px;
-  border: 1px solid #ffd700;
-  background: transparent;
-  color: #ffd700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
-}
+@media screen and (max-width: 900px) {
+  .carousel {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 0 10px;
+  }
 
-.image-box .btn:hover {
-  background: #ffd700;
-  color: #121614;
-  transform: translateY(-1px);
-}
+  .nav {
+    justify-self: center;
+  }
 
-/* ====== RESPONSIVE LAYOUTS ====== */
+  .track {
+    grid-auto-columns: minmax(220px, 1fr);
+  }
 
-/* Medium screens: 3 per row */
-@media screen and (max-width: 1024px) {
-  .image-box {
-    flex: 0 0 calc(33.333% - 14px);
-    max-width: calc(33.333% - 14px);
+  .details {
+    margin: 0 10px;
   }
 }
 
-/* Phones / small tablets: 2 per row */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .container.portfolio-page {
-    padding: 64px 0 32px;
+    padding: 60px 0 34px;
+    width: 100%;
   }
 
   .container.portfolio-page .page-title {
-    font-size: 36px;
     margin-left: 16px;
-    margin-bottom: 24px;
+    font-size: 36px;
   }
 
-  .images-container {
+  .page-subtitle {
+    margin: 0 12px 14px;
+  }
+
+  .filter-row {
     padding: 0 12px;
-    justify-content: center;
   }
 
-  .image-box {
-    flex: 0 0 calc(50% - 12px);   /* ⬅ 2 cards per row */
-    max-width: calc(50% - 12px);
-    height: 260px;                 /* give them more vertical space */
+  .carousel {
+    gap: 8px;
   }
 
-  .image-box .portfolio-image {
-    height: 120px;
+  .card {
+    min-height: 260px;
   }
 
-  .image-box .title {
-    font-size: 14px;
-  }
-
-  .image-box .description {
-    font-size: 11px;
-  }
-
-  .image-box .btn {
-    font-size: 10px;
-    padding: 4px 8px;
-  }
-}
-
-/* Very small phones: still 2 per row but taller cards */
-@media screen and (max-width: 480px) {
-  .image-box {
-    height: 280px;
-  }
-
-  .image-box .portfolio-image {
-    height: 130px;
+  .media {
+    height: 140px;
   }
 }
