@@ -54,6 +54,7 @@ const Home = () => {
 
           <div className="home-buttons-container">
             <a href={myCV} className="flat-button" target="_blank" rel="noopener noreferrer">MY CV</a>
+            <Link to="/about" className="flat-button">ABOUT ME</Link>
             <Link to="/portfolio" className="flat-button">PROJECTS</Link>
             <Link to="/contact" className="flat-button">CONTACT ME</Link>
           </div>
